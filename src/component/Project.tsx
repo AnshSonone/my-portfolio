@@ -1,11 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-function Project() {
+interface properties{
+  key:string
+  element: string
+}
+
+function Project({key, element}: properties) {
   return (
-    <div className='my-18'>
-        <div className='text-white'>
-        <h2 className='font-bold text-4xl'><span className='text-blue-300 font-bold text-4xl'>My</span> Projects</h2>
+    <div key={key} className='w-[25wmax] text-white border-[1px] py-2 border-white rounded-md my-4 cursor-pointer'>
+        <h2 className='pb-2 text-xl'>{element.projectName}</h2>
+      <div className='sm:w-[25rem]'>
+        <img className='' src={element.project} />
+        <div className='p-2'>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sed quod vero ducimus laborum rerum.</p>
         </div>
+      </div>
     </div>
   )
 }

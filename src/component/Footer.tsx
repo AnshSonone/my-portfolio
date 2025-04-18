@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa";
 function Footer() {
   return (
     <div className='text-white'>
-        <div>
+        <div className='my-8'>
             <h4>Ansh Sonone</h4>
         </div>
         <ul className="flex space-x-8 justify-center items-center my-8">

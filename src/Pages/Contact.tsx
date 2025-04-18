@@ -31,8 +31,8 @@ const sendFeedback = (e: any) => {
 
 
   return (
-    <div className='text-white flex justify-center items-center h-[70vh]'>
-      <form ref={form} onSubmit={sendFeedback} className='flex flex-col justify-center items-center w-[23rem] h-[60vh] border-[4px] border-pink-400 space-y-8 '>
+    <div className='text-white flex justify-center items-center h-[70vh] animate-fade-down animate-once'>
+      <form ref={form} onSubmit={sendFeedback} className='bg-linear-to-bl from-teal-950 to-black flex flex-col justify-center items-center w-[23rem] h-[60vh] border-[1px] space-y-8 rounded-md'>
       
       <div className='w-[300px] h-[40px] flex items-center py-2 px-3 border-[1px] border-white rounded-md mt-6'>
           <input className='outline-none text-lg' type='text' name='user_name' placeholder=' Your name' />
@@ -46,12 +46,12 @@ const sendFeedback = (e: any) => {
           <textarea className='outline-none text-lg'  name='message'  placeholder='How can i help you'></textarea>
         </div>
 
-        <button type='submit' className='py-2 px-3 text-xl' disabled={loading}>
+        <button type='submit' className=' px-3 text-xl' disabled={loading}>
   {loading ? 'Sending...' : 'Submit'}
 </button>
 
 
-        {success && <p className='text-green-500 relative top[-15px] transition-all delay-150'>Thank you! Your application has been sent.</p>}
+        { success && <p className='text-green-500 relative top[-15px] transition-all delay-150 animate-fade animate-once'>Thank you! Your application has been sent.</p>}
 
       </form>
     </div>

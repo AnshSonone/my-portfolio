@@ -9,7 +9,7 @@ import Contact from './Pages/Contact'
 function App() {
 
   return (
-    <main className='px-4 text-center py-10'>
+    <main className='px-4 text-center py-10 bg-zinc-950'>
         <Router>
             <Navbar />
           <Routes>
@@ -17,8 +17,8 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
           </Routes>
-        </Router>
       <Footer />
+        </Router>
     </main>
   )
 }
