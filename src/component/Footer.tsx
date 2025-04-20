@@ -16,10 +16,10 @@ function Footer() {
             <h4>Sononeansh@gmail.com</h4>
         </div>
         <ul className="flex space-x-8 justify-center items-center my-8">
-          <Link to='/'><li className="text-white font-bold text-2xl cursor-pointer "><FaInstagram /></li></Link>
-          <Link to=""><li className="text-white font-bold text-2xl cursor-pointer "><BsTwitterX /></li></Link>
-          <Link to=""><li className="text-white font-bold text-2xl cursor-pointer "><TfiLinkedin /></li></Link>
-          <Link to=''><li className="text-white font-bold text-2xl cursor-pointer "><FaGithub /></li></Link>
+          <Link to='https://www.instagram.com/anshsonone_/?next=%2F' target='_blank'><li className="text-white font-bold text-2xl cursor-pointer "><FaInstagram /></li></Link>
+          <Link to="https://x.com/anshsonone" target='_blank'><li className="text-white font-bold text-2xl cursor-pointer "><BsTwitterX /></li></Link>
+          <Link to="https://in.linkedin.com/in/ansh-sonone-832730245" target='_blank'><li className="text-white font-bold text-2xl cursor-pointer "><TfiLinkedin /></li></Link>
+          <Link to="https://github.com/AnshSonone/" target='_blank'><li className="text-white font-bold text-2xl cursor-pointer "><FaGithub /></li></Link>
         </ul>
     </div>
   )
