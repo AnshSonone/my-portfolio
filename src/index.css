@@ -31,127 +31,99 @@ body{
   font-style: normal;
 }
 
-.dropping-texts {
-  display: inline-block;
-  width: 180px;
-  text-align: left;
-  height: 36px;
-  vertical-align: -2px;
+.loader {
+  position: relative;
+  width: 120px;
+  height: 90px;
+  margin: 0 auto;
 }
 
-.dropping-texts > div {
-  font-size:0px;
-  opacity:0;
-  margin-left:-30px;
-  position:absolute;
-  font-weight:300;   
-  box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+.loader:before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #2a9d8f;
+  animation: loading-bounce 0.5s ease-in-out infinite alternate;
 }
 
-.dropping-texts > div:nth-child(1) {
-  animation: roll 5s linear infinite 0s;
-}
-.dropping-texts > div:nth-child(2) {
-  animation: roll 5s linear infinite 1s;
-}
-.dropping-texts > div:nth-child(3) {
-  animation: roll 5s linear infinite 2s;
-}
-.dropping-texts > div:nth-child(4) {
-  animation: roll2 5s linear infinite 3s;
+.loader:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 7px;
+  width: 45px;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
+  animation: loading-step 1s ease-in-out infinite;
 }
 
-@keyframes roll {
+@keyframes loading-bounce {
   0% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(-25deg);
+    transform: scale(1, 0.7);
   }
-  3% {
-    opacity:1;
-    transform: rotate(0deg);
+
+  40% {
+    transform: scale(0.8, 1.2);
   }
-  5% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
+
+  60% {
+    transform: scale(1, 1);
   }
-  20% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-    transform: rotate(0deg);
-  }
-  27% {
-    font-size:0px;
-    opacity:0.5;
-    margin-left:20px;
-    margin-top:100px;
-  }
+
   100% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(15deg);
+    bottom: 140px;
   }
 }
 
-@keyframes roll2 {
+@keyframes loading-step {
   0% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(-25deg);
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
+            0 10px 0 #f2f2f2,
+            -35px 50px 0 #f2f2f2,
+            -70px 90px 0 #f2f2f2;
   }
-  3% {
-    opacity:1;
-    transform: rotate(0deg);
-  }
-  5% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-  }
-  30% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-    transform: rotate(0deg);
-  }
-  37% {
-    font-size:1500px;
-    opacity:0;
-    margin-left:-1000px;
-    margin-top:-800px;
-  }
+
   100% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(15deg);
+    box-shadow: 0 10px 0 #f2f2f2,
+            -35px 50px 0 #f2f2f2,
+            -70px 90px 0 #f2f2f2,
+            -70px 90px 0 rgba(0, 0, 0, 0);
   }
 }
 
-@keyframes bg {
-  0% {background: #ff0075;}
-  3% {background: #0094ff;}
-  20% {background: #0094ff;}
-  23% {background: #b200ff;}
-  40% {background: #b200ff;}
-  43% {background: #8BC34A;}
-  60% {background: #8BC34A;}
-  63% {background: #F44336;}
-  80% {background: #F44336;}
-  83% {background: #F44336;}
-  100% {background: #F44336;}
+.form-container {
+  width: 400px;
+  background: linear-gradient( #000, black) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  /* display: flex;
+  flex-direction: column; */
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

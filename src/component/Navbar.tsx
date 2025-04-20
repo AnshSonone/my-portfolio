@@ -11,9 +11,9 @@ function Navbar() {
     return (
         <div className="py-2">
             <ul className="flex space-x-8 justify-center items-center">
-                <Link to='/'><li className={`text-white  font-bold text-2xl cursor-pointer transition-all ${pageLocation.pathname === '/' && "delay-150 translate-y-[-5px] scale-95"}`}><GoHome /></li></Link>
-                <Link to='/about'><li className={`text-white  font-bold text-2xl cursor-pointer transition-all ${pageLocation.pathname === '/about' && "delay-150 translate-y-[-5px] scale-95"}`}><AiOutlineUser /></li></Link>
-                <Link to='/contact'><li className={`text-white  font-bold text-2xl cursor-pointer transition-all ${pageLocation.pathname === '/contact' && "delay-150 translate-y-[-5px] scale-95"}`}><LuMessageSquareMore /></li></Link>
+                <Link to='/'><li className={`text-white  font-bold text-2xl cursor-pointer duration-300 ease-linear transition-all ${pageLocation.pathname === '/' && "delay-150 translate-y-[-5px] scale-90"}`}><GoHome /></li></Link>
+                <Link to='/about'><li className={`text-white  font-bold text-2xl cursor-pointer duration-300 ease-linear transition-all ${pageLocation.pathname === '/about' && "delay-150 translate-y-[-5px] scale-95"}`}><AiOutlineUser /></li></Link>
+                <Link to='/contact'><li className={`text-white  font-bold text-2xl cursor-pointer duration-300 ease-linear transition-all ${pageLocation.pathname === '/contact' && "delay-150 translate-y-[-5px] scale-95"}`}><LuMessageSquareMore /></li></Link>
             </ul>
         </div>
     )
