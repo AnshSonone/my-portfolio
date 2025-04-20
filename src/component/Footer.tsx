@@ -1,8 +1,6 @@
-import React, { Children } from 'react'
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { TfiLinkedin } from "react-icons/tfi";
-import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 

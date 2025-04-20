@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 function TechLogos({element}: any) {
   return (

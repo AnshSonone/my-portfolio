@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import TechLogos from "../component/TechLogos";
 
 const basic: string[] = ["https://res.cloudinary.com/da25rozpm/image/upload/v1745148238/HTML5_ozxqoz.png", "https://res.cloudinary.com/da25rozpm/image/upload/v1745148237/CSS3_b8rrzn.png"];
