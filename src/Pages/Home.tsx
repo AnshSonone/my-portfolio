@@ -58,7 +58,7 @@ const certificate = [
   {
     certifcateName: "Havard cs50 web",
     certificate:
-      "https://res.cloudinary.com/da25rozpm/image/upload/v1746955160/Metaweb_iarr7d.jpg",
+      "https://res.cloudinary.com/da25rozpm/image/upload/v1746955161/CS50web_rzmttr.jpg",
     description: "Completion certificate from havard cs50 fulstack development",
   },
 ];
