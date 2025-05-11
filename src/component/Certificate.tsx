@@ -1,5 +1,4 @@
 import * as motion from 'motion/react-client';
-import { Link } from 'react-router-dom';
 
 interface properties{
   element: string | any
