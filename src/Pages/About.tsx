@@ -44,7 +44,7 @@ function About() {
         <div className="flex  justify-center my-8">
           <img
             className="w-[40vh] sm:w-[50vw] lg:w-[30vw] xl:w-[20vw] rounded-md"
-            src="https://i.pinimg.com/736x/07/f6/df/07f6df70100683f9a2c3798066401cc8.jpg"
+            src="https://res.cloudinary.com/da25rozpm/image/upload/v1746957935/IMG_20240901_233727_lir5lh.jpg"
           />
         </div>
       </div>

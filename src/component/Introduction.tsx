@@ -25,10 +25,10 @@ function Introduction() {
         </div>
       </div>
 
-      <div className="text-white flex justify-center my-16 ">
+      <div className=" flex justify-center my-16 backdrop-sepia-100">
         <img
-          className="w-[40vh] lg:w-[15rem] lg:h-[15rem] rounded-md"
-          src="https://i.pinimg.com/736x/07/f6/df/07f6df70100683f9a2c3798066401cc8.jpg"
+          className="w-[40vh] lg:w-[15rem] lg:h-[16rem] rounded-md"
+          src="https://res.cloudinary.com/da25rozpm/image/upload/v1746957935/IMG_20240901_233727_lir5lh.jpg"
         />
       </div>
     </div>
