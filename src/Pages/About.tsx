@@ -6,6 +6,9 @@ const Languages: string[] = ["https://res.cloudinary.com/da25rozpm/image/upload/
 const frameworks: string[] = ["https://res.cloudinary.com/da25rozpm/image/upload/v1745148250/React_k6sdd1.png", "https://res.cloudinary.com/da25rozpm/image/upload/v1745148239/icons8-next.js-144_nyyvuu.png"];
 const backends: string[] = ["https://res.cloudinary.com/da25rozpm/image/upload/v1745148237/Django_vhushw.png", "https://res.cloudinary.com/da25rozpm/image/upload/v1745148246/Node.js_o3hql8.png"];
 const databases: string[] = ["https://res.cloudinary.com/da25rozpm/image/upload/v1745148244/MySQL_xqowk5.png", "https://res.cloudinary.com/da25rozpm/image/upload/v1745148243/MongoDB_v5c0pq.png"];
+const versionControl: string[] = ["https://res.cloudinary.com/da25rozpm/image/upload/v1748178403/Git_d71fc9.png", "https://res.cloudinary.com/da25rozpm/image/upload/v1748178403/GitHub_fnd88w.png"]
+
+
 
 function About() {
   useEffect(() => {
@@ -13,12 +16,12 @@ function About() {
   }, []);
 
   return (
-    <div className="text-white md:mx-8 mt-18 animate-fade-down animate-once">
+    <div className="text-white md:mx-8 mt-18 animate-fade-down animate-once mx-2">
       <div className="xl:flex justify-center items-center text-center">
         <div className=" space-y-2">
           <h2 className="text-4xl font-bold">Hey, I am</h2>
           <h2 className="text-4xl font-bold text-blue-300">Ansh Sonone</h2>
-          <p className="text-4xl font-bold">an aspiring Full Stack Developer</p>
+          <p className="text-4xl font-bold">An Aspiring Frontend & Backend Developer</p>
         </div>
       </div>
 
@@ -42,10 +45,10 @@ function About() {
         </div>
 
         <div className="flex  justify-center my-8">
-          <img
-            className="w-[40vh] sm:w-[50vw] lg:w-[30vw] xl:w-[20vw] rounded-md"
-            src="https://res.cloudinary.com/da25rozpm/image/upload/v1746957935/IMG_20240901_233727_lir5lh.jpg"
-          />
+        <img
+          className="w-[40vh] lg:w-[15rem] lg:h-[16rem] rounded-full "
+          src="https://res.cloudinary.com/da25rozpm/image/upload/v1746957935/IMG_20240901_233727_lir5lh.jpg"
+        />
         </div>
       </div>
 
@@ -127,6 +130,17 @@ function About() {
             <h2 className="text-2xl">Databases</h2>
             <div className="flex items-center justify-evenly">
               {databases.map((element) => (
+                <div key={element}>
+                  <TechLogos element={element} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="px-4 py-5 ">
+            <h2 className="text-2xl">Version Control</h2>
+            <div className="flex items-center justify-evenly">
+              {versionControl.map((element) => (
                 <div key={element}>
                   <TechLogos element={element} />
                 </div>
