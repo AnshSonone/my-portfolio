@@ -1,4 +1,3 @@
-import React from "react";
 import { GoHome } from "react-icons/go";
 import { AiOutlineUser } from "react-icons/ai";
 import { LuMessageSquareMore } from "react-icons/lu";

@@ -1,11 +1,10 @@
-import React, {useState, useEffect, useCallback} from "react";
+import {useState, useEffect, useCallback} from "react";
 
 
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Computer Applicaton Student.", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
 
 function Introduction() {
 
