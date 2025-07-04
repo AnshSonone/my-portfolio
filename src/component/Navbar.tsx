@@ -17,10 +17,10 @@ function Navbar() {
 
     gsap.registerPlugin(useGSAP)
 
-    const instaRef = useRef<HTMLDivElement>(null)
-    const xRef = useRef<HTMLDivElement>(null)
-    const linkedinRef = useRef<HTMLDivElement>(null)
-    const githubRef = useRef<HTMLDivElement>(null)
+    const instaRef = useRef<HTMLAnchorElement>(null)
+    const xRef = useRef<HTMLAnchorElement>(null)
+    const linkedinRef = useRef<HTMLAnchorElement>(null)
+    const githubRef = useRef<HTMLAnchorElement>(null)
 
     useGSAP(() => {
         gsap.fromTo(
@@ -65,7 +65,7 @@ function Navbar() {
                 ease: "power3.out",
                 delay: 3,
             })
-    })
+    }, [])
 
     return (
         <div className="py-6 backdrop-sepia-100 space-y-2 sm:flex justify-around items-center sticky top-[0%] z-50 bg-zinc-950 ">
