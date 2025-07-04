@@ -1,25 +1,26 @@
-import * as motion from 'motion/react-client';
 import { Link } from 'react-router-dom';
+import { FiExternalLink } from "react-icons/fi";
 
-interface properties{
-  element:  string | any
+interface properties {
+  element: string | any
 }
 
-function Project({element}: properties) {
+function Project({ element }: properties) {
 
   return (
-    <motion.div whileHover={{ scale: 1.1  }}
-    whileTap={{ scale: 1.1 }} className='flex flex-col justify-center w-full p-5 bg-linear-to-bl from-teal-950 to-zinc-950 text-white py-4  rounded-md my-2 cursor-pointer'>
+    <div className='w-[80vw] h-fit md:w-[35rem]  lg:w-[25vw] text-white rounded-md cursor-pointer my-6 md:my-4'>
       <div className='flex flex-col items-center justify-center'>
-      <img className='w-[18rem]  rounded-md' src={element.project} />
+        <img className=' rounded-t-md' src={element.project} />
       </div>
 
-      <div className='space-y-2 mt-3'>
-        <h2 className='bg-zinc-950 rounded-md'>{element.projectName}</h2>
-        <Link to={element.link} target='_blank'><h2 className='bg-zinc-950 rounded-md cursor-pointer'>Visit</h2></Link>
-        <p className='bg-zinc-950 my-2 p-2 rounded-md w-full sm:w-[20rem] md:w-full'>{element.description}</p>
+      <div className='space-y-4 bg-zinc-950 py-4 px-8 rounded-b-md w-full'>
+        <div className='flex items-center justify-between'>
+          <h2 className='text-start text-xl lg:text-xl'>{element.projectName}</h2>
+          <Link to={element.link} target='_blank'><h2 className='flex items-center cursor-pointer text-start text-2xl lg:text-lg text-blue-800  underline'>Visit <FiExternalLink size={24} className='hover:rotate-45 mx-2' /></h2></Link>
+        </div>
+        <p className='my-2 w-full md:w-full text-start text-xl lg:text-lg'>{element.description}</p>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

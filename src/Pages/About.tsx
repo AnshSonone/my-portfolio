@@ -1,5 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import TechLogos from "../component/TechLogos";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger, gsap } from "gsap/all";
 
 const basic: string[] = ["https://res.cloudinary.com/da25rozpm/image/upload/v1745148238/HTML5_ozxqoz.png", "https://res.cloudinary.com/da25rozpm/image/upload/v1745148237/CSS3_b8rrzn.png"];
 const Languages: string[] = ["https://res.cloudinary.com/da25rozpm/image/upload/v1745148242/JavaScript_cld4ji.png", "https://res.cloudinary.com/da25rozpm/image/upload/v1745148248/Python_c9w9cp.png"];
@@ -11,13 +13,90 @@ const versionControl: string[] = ["https://res.cloudinary.com/da25rozpm/image/up
 
 
 function About() {
+
   useEffect(() => {
     document.title = "Ansh sonone | About";
   }, []);
 
+  const introRef = useRef<HTMLDivElement>(null)
+  const descRef = useRef<HTMLDivElement>(null)
+  const photoRef = useRef<HTMLDivElement>(null)
+  const journeyRef = useRef<HTMLDivElement>(null)
+  const techIUseRef = useRef<HTMLDivElement>(null)
+
+  gsap.registerPlugin(useGSAP, ScrollTrigger)
+
+  useGSAP(() => {
+    gsap.fromTo(
+      introRef.current,
+      { y: -200, opacity: 0, },
+      {
+        y: 0,
+        duration: 2,
+        opacity: 1,
+        ease: "power3.out",
+      })
+
+    gsap.fromTo(
+      descRef.current,
+      { x: -200, opacity: 0, },
+      {
+        x: 0,
+        duration: 2,
+        opacity: 1,
+        ease: "power3.out",
+      })
+
+    gsap.fromTo(
+      photoRef.current,
+      { x: 200, opacity: 0, },
+      {
+        x: 0,
+        duration: 2,
+        opacity: 1,
+        ease: "power3.out",
+      })
+
+    gsap.fromTo(
+      journeyRef.current,
+      { y: 200, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        immediateRender: true,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: journeyRef.current,
+          toggleActions: "play none none none",
+          start: "top+=-300 center",
+          end: "bottom+=-200"
+        }
+      }
+    )
+
+    gsap.fromTo(
+      techIUseRef.current,
+      { y: 200, opacity: 0, },
+      {
+        y: 0,
+        duration: 2,
+        opacity: 1,
+        immediateRender: true,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: techIUseRef.current,
+          toggleActions: "play none none none",
+          start: "top+=-200 center",
+          end: "bottom+=-200",
+        },
+      }
+    )
+  })
+
   return (
-    <div className="text-white md:mx-8 mt-18 animate-fade-down animate-once mx-2">
-      <div className="xl:flex justify-center items-center text-center">
+    <div className="text-white md:mx-8 mt-10 mx-2">
+      <div ref={introRef} className="xl:flex justify-center items-center text-center">
         <div className=" space-y-2">
           <h2 className="text-4xl font-bold">Hey, I am</h2>
           <h2 className="text-4xl font-bold text-blue-300">Ansh Sonone</h2>
@@ -25,34 +104,34 @@ function About() {
         </div>
       </div>
 
-      <div className="my-10 lg:flex justify-evenly items-center lg:text-start">
-        <div className="text-white">
+      <div className="my-10 mx-4 md:mx-0 lg:flex justify-evenly items-center lg:text-start">
+        <div ref={descRef} className="text-white">
           <p className="font-bold text-xl">
             Hi, I’m Ansh Sonone, a passionate MERN + Django Developer and
             technology enthusiast. <br />I thrive on solving challenges and
             transforming ideas into impactful digital experiences.
           </p>
-        <div className="my-4">
-          <h2 className="text-2xl font-bold ">🌟 My Vision</h2>
-          <p className=" font-bold text-xl">
-            I aim to make web development more accessible to everyone, breaking
-            down complex concepts into <br />
-            actionable steps. I remember how daunting it felt when I first
-            started exploring code, <br /> which fuels my commitment to helping
-            others navigate this exciting field.
-          </p>
-        </div>
+          <div className="my-4">
+            <h2 className="text-2xl font-bold ">🌟 My Vision</h2>
+            <p className=" font-bold text-xl">
+              I aim to make web development more accessible to everyone, breaking
+              down complex concepts into <br />
+              actionable steps. I remember how daunting it felt when I first
+              started exploring code, <br /> which fuels my commitment to helping
+              others navigate this exciting field.
+            </p>
+          </div>
         </div>
 
-        <div className="flex  justify-center my-8">
-        <img
-          className="w-[40vh] lg:w-[15rem] lg:h-[16rem] rounded-full "
-          src="https://res.cloudinary.com/da25rozpm/image/upload/v1746957935/IMG_20240901_233727_lir5lh.jpg"
-        />
+        <div ref={photoRef} className="flex  justify-center my-8">
+          <img
+            className="w-[40vh] lg:w-[15rem] lg:h-[16rem] rounded-full "
+            src="https://res.cloudinary.com/da25rozpm/image/upload/v1746957935/IMG_20240901_233727_lir5lh.jpg"
+          />
         </div>
       </div>
 
-      <div>
+      <div ref={journeyRef}>
         <div className="my-4">
           <h2 className="text-2xl font-bold py-2">💡 My Journey</h2>
           <p className=" font-bold text-xl">
@@ -76,7 +155,7 @@ function About() {
         </div>
       </div>
 
-      <div className="py-10">
+      <div ref={techIUseRef} className="mt-16">
         <strong className="text-3xl text-blue-300">
           Technologies & Languages I Use
         </strong>
@@ -87,7 +166,7 @@ function About() {
             <div className="flex items-center justify-evenly">
               {basic.map((element) => (
                 <div key={element}>
-                  <TechLogos element={element} />
+                  <TechLogos element={element} tech={"HTML & CSS"} />
                 </div>
               ))}
             </div>
@@ -98,7 +177,7 @@ function About() {
             <div className="flex items-center justify-evenly">
               {Languages.map((element) => (
                 <div key={element}>
-                  <TechLogos element={element} />
+                  <TechLogos element={element} tech={"Programming Languages"} />
                 </div>
               ))}
             </div>

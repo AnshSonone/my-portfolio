@@ -9,14 +9,15 @@
   font-family: "Special Gothic Condensed One", sans-serif;
   font-weight: 300;
   font-style: normal;
-
 }
 
 body{
   margin: 0;
   padding: 0;
+  background-color: #090909;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .special-gothic-condensed-one-regular {
@@ -97,7 +98,7 @@ body{
 }
 
 .form-container {
-  width: 400px;
+  /* width: 400px; */
   background: linear-gradient( #000, black) padding-box,
               linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
   border: 2px solid transparent;
