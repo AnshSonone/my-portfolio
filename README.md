@@ -1,54 +1,47 @@
-# React + TypeScript + Vite
+# 📁 My Portfolio Website
+Welcome to my personal portfolio website, built with React.js, GSAP, Tailwind CSS, and Cloudinary.
+This site showcases my work, skills, and projects with smooth animations and an optimized, responsive design.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Demo
+### Live Site
+(https://my-portfolio-eosin-pi-21.vercel.app/)
 
-Currently, two official plugins are available:
+## ⚙️ Tech Stack
++ React.js – Front-end framework
++ GSAP – Animations and scroll effects
++ Tailwind CSS – Utility-first CSS for styling
++ Cloudinary – Image storage & CDN
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
++ Modern, responsive design
++ Smooth page transitions and animations with GSAP
++ Fast image delivery with Cloudinary CDN
++ Project gallery with live previews
++ Easy to customize and extend
 
-## Expanding the ESLint configuration
+## 📦 Installation
+```
+# 1. Clone this repository
+git clone https://github.com/your-username/your-portfolio.git
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# 2. Go into the project folder
+cd your-portfolio
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📧 Contact
+Made with ❤️ by Ansh Sonone
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+[LinkedIn](https://www.linkedin.com/in/anshsonone/)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+[Portfolio](https://my-portfolio-eosin-pi-21.vercel.app/)
+
+Email- sononeansh@gmail.com
+
+
+
